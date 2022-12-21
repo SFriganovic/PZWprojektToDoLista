@@ -1,0 +1,6 @@
+<a href="{% url 'tasks' %}">Aj nazad</a>
+<form method="POST">
+    {% csrf_token %}
+    <p>Jeste li sigurni da želite izbrisati ovaj zadatak? "{{task}}"</p>
+    <input type="submit" value="Izbriši"/>
+</form>
