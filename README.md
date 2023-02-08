@@ -2,7 +2,7 @@
 Projekt za PZW To Do Lista
 
 
-Izrada modela i predložaka (pogleda) za web aplikaciju ili uslugu.
+Kompletirano za zavšni ispit
 
 
 Tema:
