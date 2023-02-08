@@ -1,10 +1,27 @@
-<h1>Registriraj se</h1>
+{% extends 'base/main.html' %}
+{% block content %}
 
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Registriraj se">
-</form>
+<div class="header-bar">
+    <h1>Registriraj se</h1>
+</div>
+
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        <label>{{form.username.label}}</label>
+        {{form.username}}
+
+        <label>{{form.password1.label}}</label>
+        {{form.password1}}
+
+        <label>{{form.password2.label}}</label>
+        {{form.password2}}
+        <input style="margin-top:10px ;" class="button" type="submit" value="Registriraj se">
+    </form>
+    <p>Imate račun? <a href="{% url 'login' %}">Ulogiraj se</a></p>
+</div>
 
 
-<p>Imate račun? <a href="{% url 'login' %}">Ulogiraj se</a></p>
+
+
+{% endblock content %}

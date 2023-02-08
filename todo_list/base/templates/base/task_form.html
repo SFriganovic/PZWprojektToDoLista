@@ -1,7 +1,19 @@
-<h3>Obrazac za zadatke</h3>
-<a href="{% url 'tasks' %}">Aj nazad</a>
-<form method="POST" action="">
-    {%csrf_token%}
-    {{form.as_p}}
-    <input type="submit" value="Potvrdi">
-</form>
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; Nazad</a>
+</div>
+
+
+<div class="card-body">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Potvrdi">
+    </form>
+</div>
+
+
+
+{% endblock content %}

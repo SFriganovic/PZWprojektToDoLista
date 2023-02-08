@@ -1,10 +1,20 @@
-<h1>Ulogiraj se</h1>
+{% extends 'base/main.html' %}
+{% block content %}
 
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Ulogiraj se">
-</form>
+<div class="header-bar">
+    <h1>Ulogiraj se</h1>
+</div>
+
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Ulogiraj se">
+    </form>
+    <p>Nemate račun? <a href="{% url 'register' %}">Registriraj se</a></p>
+</div>
 
 
-<p>Nemate račun? <a href="{% url 'register' %}">Registriraj se</a></p>
+
+
+{% endblock content %}
